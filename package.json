@@ -13,8 +13,6 @@
     "plantuml-encoder": "^1.4.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-plantuml": "^0.0.8",
-    "vis-data": "^7.1.4",
-    "vis-network": "^9.1.4"
+    "react-plantuml": "^0.0.8"
   }
 }
