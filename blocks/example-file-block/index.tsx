@@ -100,3 +100,5 @@ interface FileBlockProps {
   originalContent: string;
   isEditable: boolean;
 }
+
+export default Block;
