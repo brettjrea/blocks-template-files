@@ -1,0 +1,44 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Compile assets
+        run: yarn build
+
+      - name: Create block tarballs
+        run: node ./release.ts
+
+      - name: Create and push tag
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git tag -a v${{ github.run_number }} -m "Release v${{ github.run_number }}"
+          git push origin v${{ github.run_number }}
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*.tar.gz
+          tag_name: v${{ github.run_number }}
+          name: Release v${{ github.run_number }}
+          draft: false
