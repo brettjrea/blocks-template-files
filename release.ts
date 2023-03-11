@@ -1,4 +1,5 @@
-#!/usr/bin/env node // specify the interpreter to be used to execute the script
+#!/usr/bin/env node 
+// specify the interpreter to be used to execute the script
 
 const path = require("path"); // import Node.js built-in 'path' module
 const fs = require("fs"); // import Node.js built-in 'fs' module
