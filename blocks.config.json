@@ -1,0 +1,11 @@
+[
+  {
+    "type": "file",
+    "id": "file-block-plantuml",
+    "title": "Example File Block plantuml",
+    "description": "A basic file block with plantuml",
+    "entry": "blocks/example-file-block/index.tsx",
+    "matches": ["*"],
+    "example_path": "https://github.com/brettjrea/blocks-template/blob/main/blocks/example-file-block/index.tsx"
+  }
+]
