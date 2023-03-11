@@ -2,7 +2,7 @@
   {
     "type": "file",
     "id": "file-block-plantuml",
-    "title": "Example File Block plantuml",
+    "title": "Example File Block with plantuml",
     "description": "A basic file block with plantuml",
     "entry": "blocks/example-file-block/index.tsx",
     "matches": ["*"],
