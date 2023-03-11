@@ -1,6 +1,6 @@
 [
   {
-    "type": "md, puml",
+    "type": "file",
     "id": "file-block-plantuml",
     "title": "Example File Block with plantuml",
     "description": "A basic file block with plantuml",
